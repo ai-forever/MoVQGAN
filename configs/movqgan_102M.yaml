@@ -1,0 +1,63 @@
+ckpt_path: ''
+wandb_project_name: 'movq'
+
+trainer:
+  log_every_n_steps: 10
+  precision: 32
+  gradient_clip_val: 1.0
+  gradient_clip_algorithm: 'value'
+  num_nodes: 1
+  accelerator: 'gpu'
+  strategy: 'ddp'
+  devices: 1
+  max_steps: 9999999
+  replace_sampler_ddp: false
+
+ModelCheckpoint:
+  dirpath: './all_saves/movq_f8_102M'
+  filename: "{step}-model"
+  save_top_k: -1
+  every_n_train_steps: 5000
+
+model:
+  target: taming.models.vqgan.MOVQ
+  params:
+    learning_rate: 0.0001
+    ema_decay: 0.9999
+    embed_dim: 4
+    n_embed: 16384
+    monitor: val/rec_loss
+    ddconfig:
+      double_z: false
+      z_channels: 4
+      resolution: 256
+      in_channels: 3
+      out_ch: 3
+      ch: 128
+      ch_mult:
+      - 1
+      - 2
+      - 2
+      - 4
+      num_res_blocks: 4
+      attn_resolutions:
+      - 32
+      dropout: 0.0
+    lossconfig:
+      target: taming.modules.losses.vqperceptual.VQLPIPSWithDiscriminator2
+      params:
+        disc_conditional: false
+        disc_in_channels: 3
+        disc_num_layers: 2
+        disc_start: 1
+        disc_weight: 0.8
+        codebook_weight: 1.0
+
+        
+data:
+  train:
+    df_path: ./dataset.csv
+    image_size: 256
+    batch_size: 10
+    shuffle: true
+    num_workers: 12
