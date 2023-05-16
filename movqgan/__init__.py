@@ -3,7 +3,7 @@ import os
 import torch
 from huggingface_hub import hf_hub_url, cached_download
 
-from movqgan.models.vqgan import MOVQ
+from .models.vqgan import MOVQ
 
 
 __all__ = ['MOVQ', 'get_movqgan_model']
