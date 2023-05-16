@@ -43,6 +43,6 @@ def get_version():
 setup(
     name='movqgan',
     author='SberAI',
-    packages=['movqgan', 'movqgan/models', 'movqgan/modules'],
+    packages=['movqgan', 'movqgan/models', 'movqgan/modules', 'movqgan/modules/vqvae'],
     install_requires=get_requirements()
 )
