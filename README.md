@@ -5,15 +5,16 @@
 
 [Habr post]()
 
-`pip install "git+https://github.com/ai-forever/MoVQGAN.git"`
-
 # Models
-+ [67M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/movqgan_67M.ckpt)
-+ [102M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/movqgan_102M.ckpt)
-+ [270M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/movqgan_270M.ckpt)
++ [67M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt)
++ [102M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_102M.ckpt)
++ [270M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt)
 
 ## How to use:
-
+### Install
+```
+pip install "git+https://github.com/ai-forever/MoVQGAN.git"
+```
 ### Train
 ```
 python main.py --config configs/movqgan_270M.yaml
