@@ -20,7 +20,7 @@ ModelCheckpoint:
   every_n_train_steps: 5000
 
 model:
-  target: taming.models.vqgan.MOVQ
+  target: movqgan.models.vqgan.MOVQ
   params:
     learning_rate: 0.0001
     ema_decay: 0.9999
@@ -44,7 +44,7 @@ model:
       - 32
       dropout: 0.0
     lossconfig:
-      target: taming.modules.losses.vqperceptual.VQLPIPSWithDiscriminator2
+      target: movqgan.modules.losses.vqperceptual.VQLPIPSWithDiscriminator2
       params:
         disc_conditional: false
         disc_in_channels: 3

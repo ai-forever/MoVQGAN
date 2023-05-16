@@ -2,17 +2,17 @@ import pytorch_lightning as pl
 from omegaconf import OmegaConf
 import torch
 import os
-from taming.data.dataset import LightningDataModule
+from movqgan.data.dataset import LightningDataModule
 from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor
 from pytorch_lightning.loggers import WandbLogger
-from taming.util import instantiate_from_config
-import taming
+from movqgan.util import instantiate_from_config
+import movqgan
 
 os.environ["WANDB_API_KEY"] = ""
 os.environ["WANDB_MODE"] = "online"
 
-config = OmegaConf.load('./configs/movqgan_67M.yaml')
+config = OmegaConf.load('./configs/movqgan_270M.yaml')
 
 model = instantiate_from_config(config['model'])
 data = LightningDataModule(config['data']['train'])

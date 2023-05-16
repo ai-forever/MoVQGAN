@@ -5,7 +5,7 @@ import torch.nn as nn
 from torchvision import models
 from collections import namedtuple
 
-from taming.util import get_ckpt_path
+from movqgan.util import get_ckpt_path
 
 
 class LPIPS(nn.Module):
@@ -25,7 +25,7 @@ class LPIPS(nn.Module):
             param.requires_grad = False
 
     def load_from_pretrained(self, name="vgg_lpips"):
-        ckpt = get_ckpt_path(name, "taming/modules/losses/lpips")
+        ckpt = get_ckpt_path(name, "movqgan/modules/losses/lpips")
         self.load_state_dict(torch.load(ckpt, map_location=torch.device("cpu")), strict=False)
         print("loaded pretrained LPIPS loss from {}".format(ckpt))
 

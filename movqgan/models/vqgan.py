@@ -3,11 +3,11 @@ from torch import nn
 import torch.nn.functional as F
 import pytorch_lightning as pl
 
-from taming.util import instantiate_from_config
-from taming.modules.vqvae.vqvae_blocks import Encoder, Decoder
-from taming.modules.vqvae.quantize import VectorQuantizer2 as VectorQuantizer
-from taming.modules.vqvae.movq_modules import MOVQDecoder
-from taming.models.ema import LitEma
+from movqgan.util import instantiate_from_config
+from movqgan.modules.vqvae.vqvae_blocks import Encoder, Decoder
+from movqgan.modules.vqvae.quantize import VectorQuantizer2 as VectorQuantizer
+from movqgan.modules.vqvae.movq_modules import MOVQDecoder
+from movqgan.models.ema import LitEma
 from einops import rearrange
 import numpy as np
 
@@ -15,10 +15,10 @@ import numpy as np
 class MOVQ(pl.LightningModule):
     def __init__(self,
                  ddconfig,
-                 learning_rate,
-                 lossconfig,
                  n_embed,
                  embed_dim,
+                 learning_rate=None,
+                 lossconfig=None,
                  ckpt_path=None,
                  ignore_keys=[],
                  image_key="image",
@@ -29,11 +29,13 @@ class MOVQ(pl.LightningModule):
                  ema_decay=None
                  ):
         super().__init__()
-        self.learning_rate = learning_rate
         self.image_key = image_key
         self.encoder = Encoder(**ddconfig)
         self.decoder = MOVQDecoder(zq_ch=embed_dim, **ddconfig)
-        self.loss = instantiate_from_config(lossconfig)
+        if lossconfig is not None:
+            self.loss = instantiate_from_config(lossconfig)
+        if learning_rate is not None:
+            self.learning_rate = learning_rate
         self.quantize = VectorQuantizer(n_embed, embed_dim, beta=0.25,
                                         remap=remap, sane_index_shape=sane_index_shape)
         self.quant_conv = torch.nn.Conv2d(ddconfig["z_channels"], embed_dim, 1)
