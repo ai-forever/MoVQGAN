@@ -5,10 +5,25 @@
 
 [Habr post]()
 
+MoVQGAN is a new SOTA model in the image reconstruction problem. This model is based on code from the [VQGAN](https://github.com/CompVis/taming-transformers) repository and modifications from the original [MoVQGAN](https://arxiv.org/pdf/2209.09002.pdf) paper.
+
 ## Models
 + [67M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt)
 + [102M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_102M.ckpt)
 + [270M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt)
+
+The following table shows a comparison of the models on the Imagenet dataset in terms of FID, SSIM, and PSNR metrics. A more detailed description of the experiments and a comparison with other models can be found in the [Habr post]().
+
+|Model|Train steps|FID|SSIM|PSNR|
+|:----|:----|:----|:----|:----|
+|f=8, [ViT-VQGAN](https://arxiv.org/pdf/2110.04627.pdf)|500000|1,28|-|-|
+|f=32, [RQ-VAE](https://arxiv.org/pdf/2203.01941.pdf)|10 epochs|1,83|-|-|
+|f=16, [Mo-VQGAN](https://arxiv.org/pdf/2209.09002.pdf)|40 epochs|1,12|0,6731|22,42|
+|f=8, VQ [CompVis](https://github.com/CompVis/latent-diffusion)|971043|1,14|-|23,07 +/- 3,99|
+|f=8, KL [CompVis](https://github.com/CompVis/latent-diffusion)|246803|0,90|-|24,19 +/- 4,19|
+| f=8, SBER-MoVQGAN 67M | 2M | 0,9647 | 0,7249 | 26,4485 |
+| f=8, SBER-MoVQGAN 102M| 2360k | 0,7764 | 0,7373 | 26,8887 |
+| f=8, SBER-MoVQGAN 270M | 1330k | 0,6858 | 0,7411 | 27,037 |
 
 ## How to use:
 ### Install
