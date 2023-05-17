@@ -1,7 +1,7 @@
 import os
 
 import torch
-from huggingface_hub import hf_hub_url, cached_download
+from huggingface_hub import hf_hub_download
 
 from .models.vqgan import MOVQ
 
@@ -90,8 +90,7 @@ def get_movqgan_model(name, pretrained=True, device='cuda', cache_dir='/tmp/movq
     model = MOVQ(**config['model_params'])
     if pretrained:
         cache_dir = os.path.join(cache_dir, name)
-        config_file_url = hf_hub_url(repo_id=config['repo_id'], filename=config['filename'])
-        cached_download(config_file_url, cache_dir=cache_dir, force_filename=config['filename'])
+        hf_hub_download(repo_id=config['repo_id'], filename=config['filename'], cache_dir=cache_dir)
         checkpoint = torch.load(os.path.join(cache_dir, config['filename']))
         model.load_state_dict(checkpoint, strict=False)
     model.eval()
