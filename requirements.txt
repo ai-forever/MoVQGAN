@@ -1,5 +1,7 @@
 torch==1.11.0
 torchvision==0.12.0
+torchaudio==0.11.0
+torchtext==0.12.0
 pytorch_lightning==1.5.10
 setuptools==59.5.0
 omegaconf==2.0.6
