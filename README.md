@@ -23,7 +23,7 @@ The following table shows a comparison of the models on the Imagenet dataset in 
 |f=8, KL [CompVis](https://github.com/CompVis/latent-diffusion)|246803|0,90|-|24,19 +/- 4,19|
 | f=8, SBER-MoVQGAN 67M | 2M | 0,9647 | 0,7249 | 26,4485 |
 | f=8, SBER-MoVQGAN 102M| 2360k | 0,7764 | 0,7373 | 26,8887 |
-| f=8, SBER-MoVQGAN 270M | 1330k | 0,6858 | 0,7411 | 27,037 |
+| f=8, SBER-MoVQGAN 270M | 1330k | **0,6858** | **0,7411** | **27,037** |
 
 ## How to use:
 ### Install
