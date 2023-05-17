@@ -1,7 +1,7 @@
 # MoVQGAN
 
 [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) [![Huggingface space](https://img.shields.io/badge/🤗-Huggingface-yello.svg)](https://huggingface.co/ai-forever/MoVQGAN)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EVKDFsa17VgdyiaPdbKShBIm4N_18Xlj?usp=sharing)
 
 [Habr post]()
 
@@ -35,7 +35,7 @@ pip install "git+https://github.com/ai-forever/MoVQGAN.git"
 python main.py --config configs/movqgan_270M.yaml
 ```
 ### Inference
-Check jupyter notebook with example in `./notebooks` folder or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+Check jupyter notebook with example in `./notebooks` folder or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EVKDFsa17VgdyiaPdbKShBIm4N_18Xlj?usp=sharing)
 
 ## Authors
 + Anastasia Maltseva: [Github](https://github.com/NastyaMittseva)
