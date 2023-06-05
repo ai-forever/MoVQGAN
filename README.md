@@ -10,7 +10,7 @@ MoVQGAN is a new SOTA model in the image reconstruction problem. This model is b
 ## Models
 + [67M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt)
 + [102M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_102M.ckpt)
-+ [270M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt)
++ [270M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_270M.ckpt)
 
 The following table shows a comparison of the models on the Imagenet dataset in terms of FID, SSIM, and PSNR metrics. A more detailed description of the experiments and a comparison with other models can be found in the [Habr post]().
 
@@ -22,20 +22,9 @@ The following table shows a comparison of the models on the Imagenet dataset in 
 | [VQ CompVis](https://github.com/CompVis/latent-diffusion)| 32x32| 16384 | 971043| 1,34| 0,6499| 23,8469| 0,0533|
 | [KL CompVis](https://github.com/CompVis/latent-diffusion)| 32x32| \- | 246803| 0,9682| 0,6918| 25,1121| 0,0474|
 | [SBER-VQGAN (from pretrain)](https://habr.com/ru/companies/sberbank/articles/581738/)| 32x32| 8192| 1 epoch| 1,4378| 0,6816| 24,3135| 0,0503|
-| SBER-MoVQGAN 67M | 32x32 | 16384 | 2M | 0,9647| 0,7249| 26,4485| 0,0415
-| SBER-MoVQGAN 102M|32x32|16384|2360k|0,7764|0,7373 | 26,8887| 0,0398|
-|SBER-MoVQGAN 270M|32x32|16384|1330k| **0,6858**| **0,7411**| **27,0370**| **0,0393**|
-
-|Model|Train steps|FID|SSIM|PSNR|
-|:----|:----|:----|:----|:----|
-|f=8, [ViT-VQGAN](https://arxiv.org/pdf/2110.04627.pdf)|500000|1,28|-|-|
-|f=32, [RQ-VAE](https://arxiv.org/pdf/2203.01941.pdf)|10 epochs|1,83|-|-|
-|f=16, [Mo-VQGAN](https://arxiv.org/pdf/2209.09002.pdf)|40 epochs|1,12|0,6731|22,42|
-|f=8, VQ [CompVis](https://github.com/CompVis/latent-diffusion)|971043|1,14|-|23,07|
-|f=8, KL [CompVis](https://github.com/CompVis/latent-diffusion)|246803|0,90|-|24,19|
-| f=8, SBER-MoVQGAN 67M | 2M | 0,96 | 0,7249 | 26,45 |
-| f=8, SBER-MoVQGAN 102M| 2360k | 0,78 | 0,7373 | 26,89 |
-| f=8, SBER-MoVQGAN 270M | 1330k | **0,69** | **0,7411** | **27,04** |
+| [SBER-MoVQGAN 67M](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt) | 32x32 | 16384 | 2M | 0,9647| 0,7249| 26,4485| 0,0415
+| [SBER-MoVQGAN 102M](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_102M.ckpt)|32x32|16384|2360k|0,7764|0,7373 | 26,8887| 0,0398|
+|[SBER-MoVQGAN 270M](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_270M.ckpt)|32x32|16384|1330k| **0,6858**| **0,7411**| **27,0370**| **0,0393**|
 
 ## How to use:
 ### Install
