@@ -14,6 +14,18 @@ MoVQGAN is a new SOTA model in the image reconstruction problem. This model is b
 
 The following table shows a comparison of the models on the Imagenet dataset in terms of FID, SSIM, and PSNR metrics. A more detailed description of the experiments and a comparison with other models can be found in the [Habr post]().
 
+|Model|Latent size|Num Z|Compression|Train steps|FID|SSIM|PSNR|L1|
+|:----|:----|:----|:----|:----|:----|:----|:----|:----|
+|[ViT-VQGAN\*](https://arxiv.org/pdf/2110.04627.pdf)|32x32|8192|8|500000|1,2800|\-|\-|\-|
+|[RQ-VAE\*](https://arxiv.org/pdf/2203.01941.pdf)|8x8x16|16384|32|10 epochs|1,8300|\-|\-|\-|
+|[Mo-VQGAN\*](https://arxiv.org/pdf/2209.09002.pdf)|16x16x4|1024|16|40 epochs|1,1200|0,6731|22,42|\-|
+| [VQ CompVis](https://github.com/CompVis/latent-diffusion)| 32x32| 16384 | 8| 971043| 1,3400| 0,6499| 23,8469| 0,0533|
+| [KL CompVis](https://github.com/CompVis/latent-diffusion)| 32x32| \- | 8 | 246803| 0,9682| 0,6918| 25,1121| 0,0474|
+| [SBER-VQGAN (from pretrain)](https://habr.com/ru/companies/sberbank/articles/581738/)| 32x32| 8192| 8| 1 epoch| 1,4378| 0,6816| 24,3135| 0,0503|
+| SBER-MoVQGAN 67M | 32x32 | 16384 | 8 | 2M | 0,9647| 0,7249| 26,4485| 0,0415
+| SBER-MoVQGAN 102M|32x32|16384|8|2360k|0,7764|0,7373 | 26,8887| 0,0398|
+|SBER-MoVQGAN 270M|32x32|16384|8|1330k| **0,6858**| **0,7411**| **27,0370**| **0,0393**|
+
 |Model|Train steps|FID|SSIM|PSNR|
 |:----|:----|:----|:----|:----|
 |f=8, [ViT-VQGAN](https://arxiv.org/pdf/2110.04627.pdf)|500000|1,28|-|-|
