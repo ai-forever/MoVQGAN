@@ -37,7 +37,7 @@ python main.py --config configs/movqgan_270M.yaml
 Check jupyter notebook with example in `./notebooks` folder or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EVKDFsa17VgdyiaPdbKShBIm4N_18Xlj?usp=sharing)
 
 ## Examples
-![](./examples/examples.png)
+![](./pics/examples.png)
 
 ## Authors
 + Anastasia Maltseva: [Github](https://github.com/NastyaMittseva)
