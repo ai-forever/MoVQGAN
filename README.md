@@ -41,6 +41,7 @@ python main.py --config configs/movqgan_270M.yaml
 Check jupyter notebook with example in `./notebooks` folder or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EVKDFsa17VgdyiaPdbKShBIm4N_18Xlj?usp=sharing)
 
 ## Examples
+This section provides examples of image reconstruction for all versions of SBER-MoVQGAN on hard-to-recover domains such as faces, text, and other complex scenes.
 ![](./pics/examples.png)
 
 ## Authors
