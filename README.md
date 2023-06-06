@@ -3,7 +3,7 @@
 [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) [![Huggingface space](https://img.shields.io/badge/🤗-Huggingface-yello.svg)](https://huggingface.co/ai-forever/MoVQGAN)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EVKDFsa17VgdyiaPdbKShBIm4N_18Xlj?usp=sharing) 
 
-[![](./pics/habr.svg)]()
+[Habr post]()
 
 MoVQGAN is a new SOTA model in the image reconstruction problem. This model is based on code from the [VQGAN](https://github.com/CompVis/taming-transformers) repository and modifications from the original [MoVQGAN](https://arxiv.org/pdf/2209.09002.pdf) paper.
 
@@ -18,13 +18,13 @@ The following table shows a comparison of the models on the Imagenet dataset in 
 |:----|:----|:----|:----|:----|:----|:----|:----|
 |[ViT-VQGAN\*](https://arxiv.org/pdf/2110.04627.pdf)|32x32|8192|500000|1,28|\-|\-|\-|
 |[RQ-VAE\*](https://arxiv.org/pdf/2203.01941.pdf)|8x8x16|16384|10 epochs|1,83|\-|\-|\-|
-|[Mo-VQGAN\*](https://arxiv.org/pdf/2209.09002.pdf)|16x16x4|1024|40 epochs|1,12|0,6731|22,42|\-|
-| [VQ CompVis](https://github.com/CompVis/latent-diffusion)| 32x32| 16384 | 971043| 1,34| 0,6499| 23,8469| 0,0533|
-| [KL CompVis](https://github.com/CompVis/latent-diffusion)| 32x32| \- | 246803| 0,9682| 0,6918| 25,1121| 0,0474|
-| [SBER-VQGAN (from pretrain)](https://habr.com/ru/companies/sberbank/articles/581738/)| 32x32| 8192| 1 epoch| 1,4378| 0,6816| 24,3135| 0,0503|
-| [SBER-MoVQGAN 67M](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt) | 32x32 | 16384 | 2M | 0,9647| 0,7249| 26,4485| 0,0415
-| [SBER-MoVQGAN 102M](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_102M.ckpt)|32x32|16384|2360k|0,7764|0,7373 | 26,8887| 0,0398|
-|[SBER-MoVQGAN 270M](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_270M.ckpt)|32x32|16384|1330k| **0,6858**| **0,7411**| **27,0370**| **0,0393**|
+|[Mo-VQGAN\*](https://arxiv.org/pdf/2209.09002.pdf)|16x16x4|1024|40 epochs|1,12|0,673|22,42|\-|
+| [VQ CompVis](https://github.com/CompVis/latent-diffusion)| 32x32| 16384 | 971043| 1,34| 0,65| 23,847| 0,053|
+| [KL CompVis](https://github.com/CompVis/latent-diffusion)| 32x32| \- | 246803| 0,968| 0,692| 25,112| 0,047|
+| [SBER-VQGAN (from pretrain)](https://habr.com/ru/companies/sberbank/articles/581738/)| 32x32| 8192| 1 epoch| 1,439| 0,682| 24,314| 0,05|
+| [SBER-MoVQGAN 67M](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt) | 32x32 | 16384 | 2M | 0,965| 0,725| 26,449| 0,042
+| [SBER-MoVQGAN 102M](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_102M.ckpt)|32x32|16384|2360k|0,776|0,737 | 26,889| 0,04|
+|[SBER-MoVQGAN 270M](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_270M.ckpt)|32x32|16384|1330k| **0,686**💥| **0,741**💥| **27,037**💥| **0,039**💥|
 
 ## How to use:
 ### Install
