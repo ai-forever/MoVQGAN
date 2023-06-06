@@ -38,6 +38,9 @@ python main.py --config configs/movqgan_270M.yaml
 ### Inference
 Check jupyter notebook with example in `./notebooks` folder or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EVKDFsa17VgdyiaPdbKShBIm4N_18Xlj?usp=sharing)
 
+## Examples
+![](./examples/examples.png)
+
 ## Authors
 + Anastasia Maltseva: [Github](https://github.com/NastyaMittseva)
 + Arseniy Shakhmatov: [Github](https://github.com/cene555), [Blog](https://t.me/gradientdip)
