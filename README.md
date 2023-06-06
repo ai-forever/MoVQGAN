@@ -1,9 +1,7 @@
 # MoVQGAN
 
 [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) [![Huggingface space](https://img.shields.io/badge/🤗-Huggingface-yello.svg)](https://huggingface.co/ai-forever/MoVQGAN)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EVKDFsa17VgdyiaPdbKShBIm4N_18Xlj?usp=sharing)
-
-[Habr post]()
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EVKDFsa17VgdyiaPdbKShBIm4N_18Xlj?usp=sharing) [![](./pics/habr.svg)]()
 
 MoVQGAN is a new SOTA model in the image reconstruction problem. This model is based on code from the [VQGAN](https://github.com/CompVis/taming-transformers) repository and modifications from the original [MoVQGAN](https://arxiv.org/pdf/2209.09002.pdf) paper.
 
