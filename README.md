@@ -7,7 +7,7 @@
 
 ![](./pics/example.png)
 
-MoVQGAN (Modulated Vector Quantized GAN) is a new SOTA model in the image reconstruction problem. This model is based on code from the [VQGAN](https://github.com/CompVis/taming-transformers) repository and modifications from the original [MoVQGAN](https://arxiv.org/pdf/2209.09002.pdf) paper. The architecture of MoVQGAN is shown below in the [figure](https://arxiv.org/pdf/2209.09002.pdf). 
+SBER-MoVQGAN (Modulated Vector Quantized GAN) is a new SOTA model in the image reconstruction problem. This model is based on code from the [VQGAN](https://github.com/CompVis/taming-transformers) repository and modifications from the original [MoVQGAN](https://arxiv.org/pdf/2209.09002.pdf) paper. The architecture of SBER-MoVQGAN is shown below in the [figure](https://arxiv.org/pdf/2209.09002.pdf). 
 
 ![](./pics/architecture.png)
 
