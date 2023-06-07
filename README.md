@@ -1,4 +1,4 @@
-# MoVQGAN
+# SBER-MoVQGAN
 
 [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) [![Huggingface space](https://img.shields.io/badge/🤗-Huggingface-yello.svg)](https://huggingface.co/ai-forever/MoVQGAN)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EVKDFsa17VgdyiaPdbKShBIm4N_18Xlj?usp=sharing) 
@@ -7,14 +7,16 @@
 
 ![](./pics/example.png)
 
-MoVQGAN (Modulated Vector Quantized GAN) is a new SOTA model in the image reconstruction problem. This model is based on code from the [VQGAN](https://github.com/CompVis/taming-transformers) repository and modifications from the original [MoVQGAN](https://arxiv.org/pdf/2209.09002.pdf) paper. The architecture of MoVQGAN is shown below in the [figure](https://arxiv.org/pdf/2209.09002.pdf). MoVQGAN was successfully implemented in [Kandinsky 2.1](https://github.com/ai-forever/Kandinsky-2), and became one of the architecture blocks that allowed to significantly improve the quality of image generation from text.
+MoVQGAN (Modulated Vector Quantized GAN) is a new SOTA model in the image reconstruction problem. This model is based on code from the [VQGAN](https://github.com/CompVis/taming-transformers) repository and modifications from the original [MoVQGAN](https://arxiv.org/pdf/2209.09002.pdf) paper. The architecture of MoVQGAN is shown below in the [figure](https://arxiv.org/pdf/2209.09002.pdf). 
 
 ![](./pics/architecture.png)
 
+SBER-MoVQGAN was successfully implemented in [Kandinsky 2.1](https://github.com/ai-forever/Kandinsky-2), and became one of the architecture blocks that allowed to significantly improve the quality of image generation from text.
+
 ## Models
-+ [67M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt)
-+ [102M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_102M.ckpt)
-+ [270M MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_270M.ckpt)
++ [67M SBER-MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_67M.ckpt)
++ [102M SBER-MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_102M.ckpt)
++ [270M SBER-MoVQGAN](https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_270M.ckpt)
 
 The following table shows a comparison of the models on the Imagenet dataset in terms of FID, SSIM, and PSNR metrics. A more detailed description of the experiments and a comparison with other models can be found in the [Habr post]().
 
