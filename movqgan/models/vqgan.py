@@ -86,7 +86,7 @@ class MOVQ(pl.LightningModule):
         batch_size = code_b.shape[0]
         quant = self.quantize.embedding(code_b.flatten())
         grid_size = int((quant.shape[0] // batch_size)**0.5)
-        quant = quant.view((1, 32, 32, 4))
+        quant = quant.view((batch_size, grid_size, grid_size, 4))
         quant = rearrange(quant, 'b h w c -> b c h w').contiguous()
         quant2 = self.post_quant_conv(quant)
         dec = self.decoder(quant2, quant)
